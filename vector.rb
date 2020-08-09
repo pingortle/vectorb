@@ -1,16 +1,4 @@
-module NumericScalarMultiplication
-  [Complex, Float, Integer, Rational].each do |numeric|
-    refine numeric do
-      def *(other)
-        return super unless other.is_a? Vector
-        other * self
-      end
-    end
-  end
-end
-
 class Vector
-  using NumericScalarMultiplication
   include Enumerable
 
   def self.of(*components)
@@ -42,7 +30,7 @@ class Vector
   end
 
   def vector_project_onto(other)
-    scalar_project_onto(other) * other.normalized
+    other.normalized * scalar_project_onto(other)
   end
 
   def scalar_project_onto(other)
