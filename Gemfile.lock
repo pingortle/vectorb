@@ -1,0 +1,20 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    given_core (3.8.0)
+      sorcerer (>= 0.3.7)
+    minitest (5.14.1)
+    minitest-given (3.8.0)
+      given_core (= 3.8.0)
+      minitest (> 4.3)
+    sorcerer (2.0.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  minitest
+  minitest-given
+
+BUNDLED WITH
+   2.1.4
